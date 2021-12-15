@@ -1,0 +1,30 @@
+.li {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  list-style-type: none;
+  background-color: var(--clr-primary-2);
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow-y: scroll;
+  transition: 300ms;
+  color: var(--clr-text);
+}
+.li:hover {
+  padding-left: 1.25rem;
+}
+.li::-webkit-scrollbar {
+  display: none;
+}
+.li {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.icon {
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: var(--clr-icon);
+}

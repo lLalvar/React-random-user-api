@@ -1,0 +1,58 @@
+.person-modal-container {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -10;
+  opacity: 0;
+  transition: 300ms;
+}
+.show-person-modal {
+  opacity: 1;
+  z-index: 10;
+}
+
+.person-modal {
+  border-radius: 10px;
+  width: 80vw;
+  max-width: 600px;
+  height: 40vh;
+  background-color: var(--clr-white);
+  position: relative;
+  transform: scale(0);
+  transition: 300ms;
+}
+.show-person-modal .person-modal {
+  transform: scale(1);
+}
+
+.person-modal img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.person-modal button {
+  padding: 0.5rem 0.6rem 0.2rem;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--clr-icon);
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  transition: 300ms;
+}
+
+.person-modal button:hover {
+  outline: 3px solid var(--clr-icon);
+  background-color: var(--clr-white);
+  color: var(--clr-icon);
+}

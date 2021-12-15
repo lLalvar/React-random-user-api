@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --clr-primary-1: hsl(15, 100%, 97%);
+  --clr-primary-2: hsl(26, 100%, 95%);
+  --clr-primary-3: rgb(229, 211, 190);
+  --clr-text: #222;
+  --clr-icon: rgb(153, 134, 118);
+  --clr-white: #fff;
+}
+
+.dark {
+  --clr-primary-1: hsl(249, 16%, 9%);
+  --clr-primary-2: hsl(245, 12%, 20%);
+  --clr-primary-3: rgb(85, 84, 104);
+  --clr-text: #fff;
+  --clr-icon: rgb(168, 168, 168);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background-color: var(--clr-primary-1);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h3 {
+  color: var(--clr-white);
+}
+
+main {
+  width: 90vw;
+  max-width: 650px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-primary-3);
+  padding: 1rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.btn {
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: var(--clr-primary-2);
+  border-radius: 10px;
+  font-size: 1.5rem;
+  margin: 1rem;
+  cursor: pointer;
+  color: var(--clr-text);
+  transition: 300ms;
+  box-shadow: 0 4px 8px rgba(53, 25, 0, 0.2);
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.random-person-btn {
+  width: 210px;
+}
+
+.person-info {
+  width: 100%;
+  position: relative;
+}
+
+.img {
+  margin: 1rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: var(--clr-primary-2);
+  border: 5px solid var(--clr-primary-1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 300ms;
+  user-select: none;
+}
+.img:active {
+  box-shadow: 0 0 8px rgba(70, 35, 35, 0.3);
+  transform: scale(0.98);
+}
+
+@media (max-width: 550px) {
+  .container {
+    padding: 1rem 1rem;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+
+  li h2 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 400px) {
+  .btn {
+    width: 100%;
+    font-size: 1.25rem;
+  }
+}
